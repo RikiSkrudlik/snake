@@ -1,12 +1,24 @@
 import pygame
+import tkinter
 
-class snake():
+class snake(object):
+
+    body = []
+    turns = ()
     
     def __init__(self, color, pos):
-        pass
+        self.color = color
+        self.head = cube(pos)
+        self.body,append(self.head)
+        self dirnx = 0
+        self.dirny = 1
 
     def move(self):
-        pass
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+
+            keys = pygame.key.get_pressed()
 
     def reset(self, pos):
         pass
@@ -17,6 +29,17 @@ class snake():
     def draw(self, surface):
         pass
 
+class cube(object):
+    rows = 0
+    width = 0
+    def __init__(self.start, dirnx = 1, dirny = 0, color = (255, 0, 0)):
+        pass
+    
+    def move(self, dirnx, dirny):
+        pass
+    
+    def draw(self, surface, eyes = False):
+        pass 
 
 def drawGrid(width, rows, surface):
     space = width // rows
@@ -33,6 +56,12 @@ def redrawWindow(surface):
     surface.fill((0, 0, 0))
     drawGrid(WIDTH, rows, surface)
     pygame.display.update()
+
+def randomSnack():
+    pass
+
+def messageBox():
+    pass
 
 def main():
     pygame.init()
